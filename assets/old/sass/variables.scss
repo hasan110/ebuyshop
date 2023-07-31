@@ -1,0 +1,49 @@
+$PrimaryTheme: #00A9A5;
+$SecondaryTheme: #0B5351;
+.theme--light {
+    ////////backgrounds////////
+    --surface-a: #ffffff;
+    --surface-b: #E1E5EA;
+    --surface-c: #f9f9f9;
+    //////////hovers///////////
+    --surface-hover-a: #F2F9F8;
+    --surface-hover-b: #e7ecec;
+    ////////////texts//////////
+    --text-color-primary: #141414;
+    --text-color-secondary: #000000;
+    --active-text-color-primary: #0F044C;
+    --active-text-color-secondary: #141E61;
+    ////////box-shadow/////////
+    --header-boxshadow: 0px 1px 2px #ccc;
+}
+
+.theme--dark {
+    ////////backgrounds////////
+    --surface-a: #091f30;
+    --surface-b: #021726;
+    --surface-c: #0d2c3f;
+    //////////hovers///////////
+    --surface-hover-a: #021726;
+    --surface-hover-b: #0d2c3f;
+    ////////////texts//////////
+    --text-color-primary: #f5f1f1;
+    --text-color-secondary: rgb(223, 217, 217);
+    --active-text-color-primary: #ffffff;
+    --active-text-color-secondary: #7190f8;
+    ////////box-shadow/////////
+    --header-boxshadow: 0 3px 5px rgb(0 0 0 / 2%), 0 0 2px rgb(0 0 0 / 5%), 0 1px 4px rgb(0 0 0 / 8%);
+}
+
+.v-application--is-rtl {
+    --helper-list-border-left: 0;
+    --helper-list-border-right: 2px;
+    --sub-menu-list-left: auto;
+    --sub-menu-list-right: 0;
+}
+
+.v-application--is-ltr {
+    --helper-list-border-left: 2px;
+    --helper-list-border-right: 0px;
+    --sub-menu-list-right: auto;
+    --sub-menu-list-left: 0;
+}

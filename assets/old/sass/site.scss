@@ -1,0 +1,159 @@
+.v-application {
+    background: var(--surface-a) !important;
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    box-shadow: var(--header-boxshadow);
+    background-color: var(--surface-a);
+    .menu-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &>.app-logo {
+            margin: 0 .5rem;
+            .app-logo-img {
+                height: 48px;
+            }
+        }
+        &>.menu-list {
+            padding-left: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            li {
+                position: relative;
+                margin: 0 .5rem;
+                &:hover {
+                    &>a>.icon {
+                        transform: rotate(180deg);
+                    }
+                    &>.sub-menu-list {
+                        display: block;
+                    }
+                }
+                &>a {
+                    transition: all .1s linear;
+                    padding: .5rem 1.25rem;
+                    border-radius: 4px;
+                    color: var(--text-color-primary);
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    &:hover {
+                        background-color: var(--surface-hover-a);
+                    }
+                    .icon {
+                        font-size: 18px;
+                        line-height: 0;
+                        margin: 0 0.25rem;
+                        transition: all .1s linear;
+                    }
+                }
+            }
+            .sub-menu-list {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: var(--sub-menu-list-left);
+                right: var(--sub-menu-list-right);
+                min-width: 180px;
+                align-items: center;
+                background-color: var(--surface-c);
+                list-style: none;
+                border-radius: .5rem;
+                box-shadow: var(--header-boxshadow);
+                padding-left: 0;
+                padding: .5rem 0;
+                z-index: 14;
+            }
+        }
+    }
+    .actions-wrapper {
+        width: auto;
+        .actions-list {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            padding-left: 0px;
+            &>li:not(.has-list) {
+                padding: 0 .25rem;
+            }
+            .helper-list {
+                display: flex;
+                list-style: none;
+                align-items: center;
+                padding-left: 0px;
+                border-top: 0;
+                border-bottom: 0;
+                border-left: var(--helper-list-border-left);
+                border-right: var(--helper-list-border-right);
+                border-color: var(--surface-c);
+                border-style: solid;
+                &>li {
+                    padding: 0 .25rem;
+                    position: relative;
+                    &:hover {
+                        &>.sub-menu-list {
+                            display: block;
+                        }
+                    }
+                    .sub-menu-list {
+                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        right: var(--sub-menu-list-left);
+                        left: var(--sub-menu-list-right);
+                        min-width: 180px;
+                        align-items: center;
+                        background-color: var(--surface-c);
+                        list-style: none;
+                        border-radius: .5rem;
+                        box-shadow: var(--header-boxshadow);
+                        padding-left: 0;
+                        padding: .5rem 0;
+                        z-index: 14;
+                        li {
+                            width: 100%;
+                            a {
+                                width: 100%;
+                                padding: .5rem;
+                                display: block;
+                                color: var(--text-color-primary);
+                                &:hover {
+                                    background-color: var(--surface-hover-a);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.app-main {
+    max-width: 1050px !important;
+    margin: auto;
+    width: 100%;
+}
+
+.app-data-box {
+    padding: 1rem;
+}
+
+.app-link {
+    color: var(--text-color-primary) !important;
+    text-decoration: none;
+    user-select: none;
+    transition: all .1s linear;
+    &.app-link-active {
+        color: $PrimaryTheme !important;
+    }
+    &:hover {
+        color: $PrimaryTheme !important;
+    }
+}

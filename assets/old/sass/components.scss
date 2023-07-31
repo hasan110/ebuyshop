@@ -1,0 +1,193 @@
+// ===========Button
+.app-btn {
+    align-items: center;
+    border-radius: 4px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    outline: 0;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.18s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    padding: 0 0.5rem;
+    &.app-btn-eleveated:hover {
+        box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+    }
+    ////////
+    //sizing
+    ////////
+    &.app-btn-sm {
+        height: 36px;
+        min-width: 64px;
+        &.app-btn-fab {
+            width: 36px;
+        }
+    }
+    &.app-btn-md {
+        height: 40px;
+        min-width: 72px;
+        &.app-btn-fab {
+            width: 40px;
+        }
+    }
+    &.app-btn-lg {
+        height: 44px;
+        min-width: 80px;
+        &.app-btn-fab {
+            width: 44px;
+        }
+    }
+    &.app-btn-lg {
+        height: 48px;
+        min-width: 88px;
+        &.app-btn-fab {
+            width: 48px;
+        }
+    }
+    &.app-btn-fab {
+        min-width: 0px !important;
+        border-radius: 50%;
+    }
+    &.app-btn-block {
+        min-width: 100% !important;
+        width: 100% !important;
+    }
+    &.app-btn-disable {
+        user-select: none;
+        opacity: .7;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+    &.app-btn-loading::after {
+        content: '';
+        width: 25px;
+        height: 25px;
+        border: 2px solid #F2F9F8;
+        border-left-color: #8b8b8b;
+        border-radius: 50%;
+        margin: 0 0.5rem;
+        animation: app-btn-loading .5s linear infinite;
+    }
+    @keyframes app-btn-loading {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    ////////
+    //color
+    ////////
+    &.app-btn-theme {
+        background-color: $PrimaryTheme;
+        border-color: $PrimaryTheme;
+        color: #F2F9F8;
+    }
+    &.app-btn-text-theme {
+        color: $PrimaryTheme;
+    }
+    &.app-btn-info {
+        background-color: rgb( 59, 222, 200);
+        border-color: rgb( 59, 222, 200);
+        color: #F2F9F8;
+    }
+    &.app-btn-normal {
+        background-color: transparent;
+        border-color: transparent;
+        color: var(--text-color-primary);
+        &:hover {
+            background-color: var(--surface-hover-a);
+        }
+    }
+    &.app-btn-info {
+        background-color: rgb( 59, 222, 200);
+        border-color: rgb( 59, 222, 200);
+        color: #F2F9F8;
+    }
+    &.app-btn-text-info {
+        color: rgb( 59, 222, 200);
+        &:hover {
+            background-color: rgba(59, 222, 200, 0.1);
+        }
+    }
+    &.app-btn-purple {
+        background-color: rgb( 125, 51, 255);
+        border-color: rgb( 125, 51, 255);
+        color: #F2F9F8;
+    }
+    &.app-btn-text-purple {
+        color: rgb( 125, 51, 255);
+        &:hover {
+            background-color: rgba(125, 51, 255, 0.1);
+        }
+    }
+    &.app-btn-primary {
+        background-color: rgb( 26, 92, 255);
+        border-color: rgb( 26, 92, 255);
+        color: #F2F9F8;
+    }
+    &.app-btn-text-primary {
+        color: rgb( 26, 92, 255);
+        &:hover {
+            background-color: rgba(26, 92, 255, 0.1);
+        }
+    }
+}
+
+// ===========Table
+.app-table-responsive {
+    overflow: auto;
+    width: 100%;
+}
+
+.app-table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    &>thead {
+        &>tr {
+            &>th {
+                padding: 1rem .5rem;
+                text-align: inherit;
+            }
+        }
+    }
+    &>tbody {
+        &>tr {
+            transition: all .1s linear;
+            td {
+                border: 0;
+                padding: .75rem .5rem;
+            }
+        }
+    }
+    .app-table-flex {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &.app-table-striped tbody tr {
+        &:nth-child(odd) {
+            background-color: var(--surface-c);
+            box-shadow: 0px 0px 8px 0px rgb(0 0 0 / .15);
+        }
+    }
+    &.app-table-hover tbody tr:hover {
+        transform: scale(1.01);
+        z-index: 2;
+    }
+    .app-table-img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        object-fit: contain;
+    }
+}

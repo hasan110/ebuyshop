@@ -1,0 +1,100 @@
+/* ------ main ------ */
+
+body {
+    font-family: mainFont;
+}
+
+
+/* ------ main ------ */
+
+
+/* ------ Fonts ------ */
+
+@font-face {
+    font-family: mainFont;
+    font-weight: normal;
+    src: url('../fonts/APP-Medium.woff2') format('truetype');
+    unicode-range: U+0600-06FF;
+}
+
+@font-face {
+    font-family: mainFont;
+    font-weight: bold;
+    src: url('../fonts/APP-Bold.woff2') format('truetype');
+    unicode-range: U+0600-06FF;
+}
+
+
+/* @font-face {
+    font-family: mainFont;
+    font-weight: lighter;
+    src: url('../fonts/IRANSansLight.ttf') format('truetype');
+    unicode-range: U+0600-06FF;
+} */
+
+@font-face {
+    font-family: mainFont;
+    font-weight: normal;
+    src: url('../fonts/IBMPlex-Regular.ttf') format('truetype');
+    unicode-range: U+0020-007F;
+}
+
+@font-face {
+    font-family: mainFont;
+    font-weight: bold;
+    src: url('../fonts/IBMPlex-Bold.ttf') format('truetype');
+    unicode-range: U+0020-007F;
+}
+
+
+/* ------ Fonts ------ */
+
+
+/* ------ vuetify reset ------ */
+
+.v-application {
+    font-family: mainFont !important;
+}
+
+.Vue-Toastification__toast {
+    font-family: appFont !important;
+}
+
+.Vue-Toastification__toast-body {
+    font-family: appFont !important;
+}
+
+.theme--dark.v-card {
+    background-color: var(--surface-c) !important;
+}
+
+
+/* ------ vuetify reset ------ */
+
+
+/* ------ application global styles ------ */
+
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+    transition-duration: 0.5s;
+    transition-property: height, opacity, transform;
+    transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    overflow: hidden;
+}
+
+.slide-left-enter,
+.slide-right-leave-active {
+    opacity: 0;
+    transform: translate(2em, 0);
+}
+
+.slide-left-leave-active,
+.slide-right-enter {
+    opacity: 0;
+    transform: translate(-2em, 0);
+}
+
+
+/* ------ application global styles ------ */
