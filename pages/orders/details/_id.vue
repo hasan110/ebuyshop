@@ -269,7 +269,7 @@ export default {
       this.$axios.get(`get_order_details/`+this.order_id,
         {
           headers: {
-            'api_token':apiToken
+            'x-api-key':apiToken
           }
         })
         .then(res => {
@@ -287,7 +287,7 @@ export default {
       this.$axios.post(`pay_order`,{order_id:this.order_id},
         {
           headers: {
-            'api_token':apiToken
+            'x-api-key':apiToken
           }
         })
         .then(res => {
@@ -309,7 +309,7 @@ export default {
       this.$axios.post(`cash_pay_order`,{order_id:this.order_id},
         {
           headers: {
-            'api_token':apiToken
+            'x-api-key':apiToken
           }
         })
         .then( () => {

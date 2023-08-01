@@ -345,7 +345,7 @@ export default {
       return this.$axios.post(`submit_order` , this.order,
         {
           headers: {
-            'api_token':token
+            'x-api-key':token
           }
         })
         .then(res => {

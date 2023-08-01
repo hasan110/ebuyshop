@@ -84,7 +84,7 @@ export default {
       this.$axios.get(`getChatDetails/${this.chat_id}`,
         {
           headers: {
-            'api_token':token
+            'x-api-key':token
           }
         })
         .then(res => {
@@ -109,7 +109,7 @@ export default {
       this.$axios.post(`sendChatMessage`, this.form ,
         {
           headers: {
-            'api_token':token
+            'x-api-key':token
           }
         })
         .then( () => {

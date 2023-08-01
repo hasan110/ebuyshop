@@ -289,7 +289,7 @@ export default {
       this.$axios.post(`getUserData`,{},
         {
           headers: {
-            'api_token':token
+            'x-api-key':token
           }
         })
         .then(res => {
@@ -308,7 +308,7 @@ export default {
       this.$axios.post(`fast_update_profile`,this.user,
         {
           headers: {
-            'api_token':token
+            'x-api-key':token
           }
         })
         .then(res => {
@@ -333,7 +333,7 @@ export default {
       this.$axios.post(`add_credit`,this.add_credit,
         {
           headers: {
-            'api_token':token
+            'x-api-key':token
           }
         })
         .then(res => {

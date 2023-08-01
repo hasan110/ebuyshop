@@ -14,7 +14,7 @@ export default function({ app, $axios }, inject) {
       baseUrl: process.env.API_URL,
       headers: {
           // 'Authorization': 'Bearer ' + app.$cookie.get(process.env.AUTH_TOKEN_NAME)
-          'api_token': token
+          'x-api-key': token
       }
     })
     // Set baseURL to something different

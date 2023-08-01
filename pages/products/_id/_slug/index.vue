@@ -407,7 +407,7 @@ export default {
       return this.$axios.post(`product/add_comment` , this.comment,
         {
           headers: {
-            'api_token':token
+            'x-api-key':token
           }
         })
         .then( () => {
@@ -434,7 +434,7 @@ export default {
       return this.$axios.post(`product/toggle_favorite` , {product_id : this.product_id},
         {
           headers: {
-            'api_token':token
+            'x-api-key':token
           }
         })
         .then( () => {
@@ -487,7 +487,7 @@ export default {
       return this.$axios.post(`newChat` , {store_id : this.product.store.uuid},
         {
           headers: {
-            'api_token':token
+            'x-api-key':token
           }
         })
         .then(res => {

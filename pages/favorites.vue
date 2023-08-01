@@ -72,7 +72,7 @@ export default {
       this.$axios.get(`product/favorites`,
         {
           headers: {
-            'api_token':token
+            'x-api-key':token
           }
         })
         .then(res => {

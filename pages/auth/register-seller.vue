@@ -66,7 +66,7 @@ export default {
       this.$axios.get(`sellerRegister`,
         {
           headers: {
-            'api_token':token
+            'x-api-key':token
           }
         })
         .then( () => {
