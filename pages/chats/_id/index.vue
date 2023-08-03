@@ -1,7 +1,7 @@
 
 <template>
   <div class="site-wrapper">
-    <site-header fixed>
+    <site-header fixed :shadow="true">
       <template #action>
         <nuxt-link :to="{name:'chats'}">
           <i class="mdi mdi-caret-left"></i><span> بازگشت</span>

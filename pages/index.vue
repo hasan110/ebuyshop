@@ -1,6 +1,6 @@
 <template>
   <div class="site-wrapper">
-    <site-header></site-header>
+    <site-header :shadow="true"></site-header>
     <site-bottom-navigation></site-bottom-navigation>
 
     <div class="body-wrapper">

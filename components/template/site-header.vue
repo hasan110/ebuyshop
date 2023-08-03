@@ -1,5 +1,5 @@
 <template>
-  <div class="header-wrapper" :class="[fixed ? 'fixed' : '']">
+  <div class="header-wrapper" :class="{fixed : fixed , shadow : shadow}">
     <div class="header-inner">
       <div class="header-title">
         <slot name="action">
@@ -93,6 +93,10 @@ export default {
   name: 'SiteHeader',
   props:{
     fixed:{
+      default:false,
+      type:Boolean
+    },
+    shadow:{
       default:false,
       type:Boolean
     }

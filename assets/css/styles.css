@@ -919,6 +919,9 @@ Poolex Accordion
     position: absolute !important;
     background-color: #fff;
 }
+.header-wrapper.shadow{
+  box-shadow: 0 -25px 17px 20px rgba(0,0,0,.561);
+}
 
 .header-wrapper  .header-inner{
     width: 100%;
@@ -1033,7 +1036,7 @@ Poolex Accordion
 .body-wrapper{
     width: 100%;
     padding-bottom: var(--bottom-navigation-height);
-    background: #ededed;
+    background: #fff;
     min-height: 100vh;
 }
 .body-wrapper.round{
@@ -1053,7 +1056,6 @@ Poolex Accordion
 
 .section-1{
     padding: .5rem 0;
-    min-height: 430px;
 }
 /*------------------------------------
 Categories
@@ -1426,7 +1428,8 @@ Product
 }
 .product-details .images-wrapper{
     max-width: 100%;
-    max-height: 400px;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #ebebeb;
 }
 .product-details .images-wrapper img{
     width: 100%;
@@ -1466,7 +1469,7 @@ Product
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 2px solid #fff;
+    border: 2px solid #ebebeb;
     border-left: none;
     border-right: none;
     padding: .25rem 0;
@@ -2075,7 +2078,7 @@ RESPONSIVENESS
         min-width: 80px;
         height: 32px;
         padding: 0 4px;
-        font-size: .65rem;
+        font-size: .75rem;
     }
     .best-products-wrapper {
         padding: 0 0 0 0.25rem;
