@@ -23,7 +23,7 @@
 
           <div class="images-wrapper">
             <ssr-carousel v-if="loaded" :slides-per-page='1' show-dots show-arrows>
-              <img v-for="(item , key) in product.files" :key="key" :src="FileUrl + item.path">
+              <img v-for="(item , key) in product.files" :key="key" :src="FileUrl + item.path" :alt="item.description ?? product.name">
             </ssr-carousel>
             <template v-else>
               <v-skeleton-loader
@@ -497,12 +497,7 @@ export default {
         .catch(err => {
           const error = err.response.data;
           if(error.message){
-            this.$notify({
-              group: 'foo',
-              type: 'error',
-              duration: 5000,
-              text: 'لطفا ابتدا به حساب کاربری خود وارد شوید'
-            });
+            this.$toast.error('لطفا ابتدا به حساب کاربری خود وارد شوید');
           }else{
             this.errors = error.errors
           }

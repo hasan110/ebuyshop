@@ -95,7 +95,7 @@
                 <div v-if="home_data.best_products !== undefined && home_data.best_products.length > 8" class="best-products-animation-wrapper">
                   <div v-for="(j , k) in 15" :key="k" class="best-products">
                     <nuxt-link v-for="(item , key) in home_data.best_products" :key="key" :to="{name:'products-id-slug' , params : {id : item.uuid,slug : item.name}}" class="best-product">
-                      <img :src="FileUrl + item.files[0]['path']" :alt="item.name">
+                      <img :src="FileUrl + item.files[0]['path']" :alt="item.files[0]['description'] ?? item.name">
                     </nuxt-link>
                   </div>
                 </div>

@@ -61,7 +61,7 @@
             </div>
             <nuxt-link v-for="(item , key) in products" :key="key" :to="{name:'products-id-slug' , params : {id : item.uuid,slug : item.name}}" class="mini-product-wrapper">
               <div class="picture">
-                <img :src="FileUrl + item.files[0]['path']">
+                <img :src="FileUrl + item.files[0]['path']" :alt="item.files[0]['description'] ?? item.name">
               </div>
               <div class="details">
                 <div class="name">{{ item.name }}</div>

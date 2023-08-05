@@ -3,7 +3,7 @@
     <nuxt-link :to="{name:'products-id-slug' , params : {id : product.uuid , slug : product.slug}}" class="product type-1">
 
       <div class="picture">
-        <img :src="FileUrl + product.files[0]['path']">
+        <img :src="FileUrl + product.files[0]['path']" :alt="product.files[0]['description'] ?? product.name">
       </div>
       <div class="product-content">
         <h4 class="name">{{product.name}}</h4>
