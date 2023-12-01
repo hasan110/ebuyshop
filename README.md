@@ -1,4 +1,4 @@
-# frontend-nuxt
+# e-buy shop
 
 ## Build Setup
 
